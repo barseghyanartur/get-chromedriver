@@ -6,7 +6,7 @@ version = "0.1"
 
 try:
     readme = open(os.path.join(os.path.dirname(__file__), "README.rst")).read()
-except:
+except OSError:
     readme = ""
 
 install_requires = []
@@ -39,7 +39,8 @@ setup(
         "Development Status :: 4 - Beta",
     ],
     project_urls={
-        "Bug Tracker": "https://github.com/barseghyanartur/get-chromedriver/issues",
+        "Bug Tracker": "https://github.com/barseghyanartur/get-chromedriver/"
+                       "issues",
         "Documentation": "https://get-chromedriver.readthedocs.io/",
         "Source Code": "https://github.com/barseghyanartur/get-chromedriver/",
         "Changelog": "https://get-chromedriver.readthedocs.io/"
