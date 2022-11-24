@@ -1,0 +1,6 @@
+parametrize
+pytest
+pytest-cov
+pytest-pythonpath
+tox
+pyyaml
