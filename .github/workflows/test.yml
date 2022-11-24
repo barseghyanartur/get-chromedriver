@@ -39,11 +39,11 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -vvv
-    - name: Coveralls
-      uses: AndreMiras/coveralls-python-action@develop
-      with:
-        parallel: true
-        flag-name: Run Tests
+#    - name: Coveralls
+#      uses: AndreMiras/coveralls-python-action@develop
+#      with:
+#        parallel: true
+#        flag-name: Run Tests
 
 #  coveralls_finish:
 #    needs: build
