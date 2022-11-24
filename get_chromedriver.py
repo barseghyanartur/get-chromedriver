@@ -65,7 +65,7 @@ def get_closest_version(
     """Get closest version."""
 
     if not try_version:
-        LOGGER.error(f"Exhausted trying to get closest version. Quitting.")
+        LOGGER.error("Exhausted trying to get closest version. Quitting.")
         return None
 
     LOGGER.debug(f"try_version={try_version}")
