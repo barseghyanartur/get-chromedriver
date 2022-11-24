@@ -10,8 +10,8 @@ of ``chromedriver-py``.
 
 See the documentation for more information on what is provided.
 
-.. image:: https://img.shields.io/pypi/v/anysearch.svg
-   :target: https://pypi.python.org/pypi/anysearch
+.. image:: https://img.shields.io/pypi/v/get-chromedriver.svg
+   :target: https://pypi.python.org/pypi/get-chromedriver
    :alt: PyPI Version
 
 .. image:: https://img.shields.io/pypi/pyversions/get-chromedriver.svg
