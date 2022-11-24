@@ -77,4 +77,4 @@ build-docs:
 	cd builddocs && zip -r ../builddocs.zip . -x ".*" && cd ..
 
 rebuild-docs:
-	sphinx-apidoc get_chromedriver --full -o docs -H 'get-chromedriver' -A 'Artur Barseghyan <artur.barseghyan@gmail.com>' -f -d 20
+	sphinx-apidoc get_chromedriver --full -o docs -H 'get-chromedriver-py' -A 'Artur Barseghyan <artur.barseghyan@gmail.com>' -f -d 20

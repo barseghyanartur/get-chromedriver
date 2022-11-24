@@ -22,7 +22,7 @@ tests_require = [
 ]
 
 setup(
-    name="get-chromedriver",
+    name="get-chromedriver-py",
     version=version,
     description="Get chromedriver-py version most suitable for your system.",
     long_description=readme,
@@ -39,20 +39,21 @@ setup(
         "Development Status :: 4 - Beta",
     ],
     project_urls={
-        "Bug Tracker": "https://github.com/barseghyanartur/get-chromedriver/"
-                       "issues",
-        "Documentation": "https://get-chromedriver.readthedocs.io/",
-        "Source Code": "https://github.com/barseghyanartur/get-chromedriver/",
-        "Changelog": "https://get-chromedriver.readthedocs.io/"
+        "Bug Tracker": "https://github.com/barseghyanartur/"
+                       "get-chromedriver-py/issues",
+        "Documentation": "https://get-chromedriver-py.readthedocs.io/",
+        "Source Code": "https://github.com/barseghyanartur/"
+                       "get-chromedriver-py/",
+        "Changelog": "https://get-chromedriver-py.readthedocs.io/"
         "en/latest/changelog.html",
     },
     entry_points={
         "console_scripts": ["get-chromedriver = get_chromedriver:run_cli"]
     },
-    keywords="get-chromedriver, chromedriver-py",
+    keywords="get-chromedriver-py, chromedriver-py",
     author="Artur Barseghyan",
     author_email="artur.barseghyan@gmail.com",
-    url="https://github.com/barseghyanartur/get-chromedriver/",
+    url="https://github.com/barseghyanartur/get-chromedriver-py/",
     py_modules=["get_chromedriver"],
     license="MIT",
     python_requires=">=3.7",

@@ -1,6 +1,6 @@
-================
-get-chromedriver
-================
+===================
+get-chromedriver-py
+===================
 Get `chromedriver-py <https://pypi.org/project/chromedriver-py/>`__
 version most suitable for your system.
 
@@ -10,34 +10,34 @@ of ``chromedriver-py``.
 
 See the documentation for more information on what is provided.
 
-.. image:: https://img.shields.io/pypi/v/get-chromedriver.svg
-   :target: https://pypi.python.org/pypi/get-chromedriver
+.. image:: https://img.shields.io/pypi/v/get-chromedriver-py.svg
+   :target: https://pypi.python.org/pypi/get-chromedriver-py
    :alt: PyPI Version
 
-.. image:: https://img.shields.io/pypi/pyversions/get-chromedriver.svg
-    :target: https://pypi.python.org/pypi/get-chromedriver/
+.. image:: https://img.shields.io/pypi/pyversions/get-chromedriver-py.svg
+    :target: https://pypi.python.org/pypi/get-chromedriver-py/
     :alt: Supported Python versions
 
-.. image:: https://github.com/barseghyanartur/get-chromedriver/workflows/test/badge.svg
-   :target: https://github.com/barseghyanartur/get-chromedriver/actions?query=workflow%3Atest
+.. image:: https://github.com/barseghyanartur/get-chromedriver-py/workflows/test/badge.svg
+   :target: https://github.com/barseghyanartur/get-chromedriver-py/actions?query=workflow%3Atest
    :alt: Build Status
 
-.. image:: https://readthedocs.org/projects/get-chromedriver/badge/?version=latest
-    :target: http://get-chromedriver.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/get-chromedriver-py/badge/?version=latest
+    :target: http://get-chromedriver-py.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://github.com/barseghyanartur/get-chromedriver/#License
+   :target: https://github.com/barseghyanartur/get-chromedriver-py/#License
    :alt: MIT
 
-.. image:: https://coveralls.io/repos/github/barseghyanartur/get-chromedriver/badge.svg?branch=main
-    :target: https://coveralls.io/github/barseghyanartur/get-chromedriver?branch=main
+.. image:: https://coveralls.io/repos/github/barseghyanartur/get-chromedriver-py/badge.svg?branch=main
+    :target: https://coveralls.io/github/barseghyanartur/get-chromedriver-py?branch=main
     :alt: Coverage
 
 Documentation
 =============
 Documentation is available on `Read the Docs
-<http://get-chromedriver.readthedocs.io/>`_.
+<http://get-chromedriver-py.readthedocs.io/>`_.
 
 Prerequisites
 =============
@@ -49,13 +49,13 @@ Install latest stable version from PyPI:
 
 .. code-block:: sh
 
-    pip install get-chromedriver
+    pip install get-chromedriver-py
 
 Or latest stable version from GitHub:
 
 .. code-block:: sh
 
-    pip install https://github.com/barseghyanartur/get-chromedriver/archive/main.tar.gz
+    pip install https://github.com/barseghyanartur/get-chromedriver-py/archive/main.tar.gz
 
 Usage
 =====
@@ -142,7 +142,7 @@ MIT
 Support
 =======
 For any security issues contact me at the e-mail given in the `Author`_ section.
-For overall issues, go to `GitHub <https://github.com/get-chromedriver/anysearch/issues>`_.
+For overall issues, go to `GitHub <https://github.com/get-chromedriver-py/anysearch/issues>`_.
 
 Author
 ======
