@@ -2,9 +2,11 @@
 get-chromedriver
 ================
 Get `chromedriver-py <https://pypi.org/project/chromedriver-py/>`__
-version most suitable for your system. For instance, you could use
-it with GitHub Actions to match installed `Chromium` browser version with most
-suitable version of `chromedriver-py`.
+version most suitable for your system.
+
+For instance, you could use it with GitHub Actions to match
+installed ``Chromium`` browser version with most suitable version
+of ``chromedriver-py``.
 
 See the documentation for more information on what is provided.
 
