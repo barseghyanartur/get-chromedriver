@@ -2,7 +2,7 @@ import os
 
 from setuptools import setup
 
-version = "0.1"
+version = "0.1.1"
 
 try:
     readme = open(os.path.join(os.path.dirname(__file__), "README.rst")).read()
@@ -27,6 +27,7 @@ setup(
     description="Get chromedriver-py version most suitable for your system.",
     long_description=readme,
     classifiers=[
+        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
@@ -56,7 +57,7 @@ setup(
     url="https://github.com/barseghyanartur/get-chromedriver-py/",
     py_modules=["get_chromedriver"],
     license="MIT",
-    python_requires=">=3.7",
+    python_requires=">=3.6",
     install_requires=(install_requires + extras_require),
     tests_require=tests_require,
     include_package_data=True,

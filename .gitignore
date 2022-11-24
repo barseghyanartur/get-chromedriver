@@ -25,5 +25,5 @@ codebin/
 /builddocs.zip
 /build/
 /dist/
-get_chromedriver.egg-info
+get_chromedriver_py.egg-info
 matyan.log*
