@@ -62,7 +62,7 @@ isort:
 	isort . --overwrite-in-place
 
 test:
-	pytest -vvv -s
+	pytest -vvv
 
 tox:
 	tox

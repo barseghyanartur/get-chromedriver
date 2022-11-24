@@ -7,6 +7,7 @@ from get_chromedriver import (
     get_closest_version,
     get_releases_tree,
     run,
+    run_cli,
 )
 
 __all__ = ("GetChromedriverTestCase",)
@@ -435,6 +436,8 @@ class GetChromedriverTestCase(unittest.TestCase):
         [
             ("107.0.5304.110", "107.0.5304.18"),
             ("100.0.4896.12", "100.0.4896.20"),
+            ("", None),
+            ("9999", None),
         ]
     )
     def test_get_closest_version(self, chromium_version, chromedriver_version):
@@ -450,3 +453,10 @@ class GetChromedriverTestCase(unittest.TestCase):
 
     def test_run(self):
         """Test run."""
+        result = run()
+        self.assertTrue(result)
+
+    def test_run_cli(self):
+        """Test run CLI."""
+        result = run_cli()
+        self.assertFalse(result)

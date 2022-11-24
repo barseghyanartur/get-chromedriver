@@ -75,7 +75,7 @@ def get_closest_version(
             ".".join(_try_version[1:]), tree[_try_version[0]]
         )
     else:
-        return tree["version"]
+        return tree.get("version", None)
 
 
 def run() -> bool:
