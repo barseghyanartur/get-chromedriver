@@ -53,6 +53,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+    - name: Install dependencies
+      run: |
+        python -m pip install pyyaml
     - name: Coveralls Finished
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}

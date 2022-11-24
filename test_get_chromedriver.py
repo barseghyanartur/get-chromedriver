@@ -427,6 +427,8 @@ class GetChromedriverTestCase(unittest.TestCase):
 
     def test_get_chromium_version(self):
         """Test get_chromium_version."""
+        chromium_version = get_chromium_version()
+        self.assertIsNotNone(chromium_version)
 
     @parametrize(
         "chromium_version, chromedriver_version",
@@ -443,6 +445,8 @@ class GetChromedriverTestCase(unittest.TestCase):
 
     def test_get_releases_tree(self):
         """Test get_releases_tree."""
+        releases_tree = get_releases_tree()
+        self.assertIsNotNone(releases_tree)
 
     def test_run(self):
         """Test run."""
