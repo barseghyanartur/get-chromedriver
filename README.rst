@@ -51,7 +51,7 @@ Install latest stable version from PyPI:
 
     pip install get-chromedriver
 
-or latest stable version from GitHub:
+Or latest stable version from GitHub:
 
 .. code-block:: sh
 
