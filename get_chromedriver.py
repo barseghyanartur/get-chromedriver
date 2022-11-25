@@ -13,10 +13,10 @@ from urllib.error import HTTPError
 from urllib.request import urlopen
 
 __title__ = "get_chromedriver.py"
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __author__ = "Artur Barseghyan <artur.barseghyan@gmail.com>"
 __copyright__ = "2022 Artur Barseghyan"
-__license__ = "GPL 2.0/LGPL 2.1"
+__license__ = "MIT"
 __all__ = (
     "get_chromium_version",
     "get_closest_version",

@@ -13,6 +13,9 @@ from get_chromedriver import (
     run_cli,
 )
 
+__author__ = "Artur Barseghyan <artur.barseghyan@gmail.com>"
+__copyright__ = "2022 Artur Barseghyan"
+__license__ = "MIT"
 __all__ = ("GetChromedriverTestCase",)
 
 RELEASES = [
