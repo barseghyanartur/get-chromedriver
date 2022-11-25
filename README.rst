@@ -142,7 +142,7 @@ MIT
 Support
 =======
 For any security issues contact me at the e-mail given in the `Author`_ section.
-For overall issues, go to `GitHub <https://github.com/get-chromedriver-py/anysearch/issues>`_.
+For overall issues, go to `GitHub <https://github.com/barseghyanartur/get-chromedriver-py/issues>`_.
 
 Author
 ======
