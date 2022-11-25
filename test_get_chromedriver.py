@@ -489,7 +489,10 @@ class GetChromedriverTestCase(unittest.TestCase):
         result = run()
         self.assertFalse(result)
 
-    @skipIf(version_info.major == 3 and version_info.minor == 11)
+    @skipIf(
+        version_info.major == 3 and version_info.minor == 11,
+        "Somehow, patching of HTTPError doesn't work on Python 3.11"
+    )
     @patch(
         "get_chromedriver.urlopen",
         side_effect=HTTPError(
