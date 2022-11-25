@@ -24,7 +24,7 @@ try:
     version = get_chromedriver.__version__
     project = get_chromedriver.__title__
     copyright = get_chromedriver.__copyright__
-except Exception as e:
+except ImportError:
     version = "0.1"
     project = "get-chromedriver-py"
     copyright = "2022, Artur Barseghyan <artur.barseghyan@gmail.com>"
@@ -197,7 +197,8 @@ latex_documents = [
         "index",
         "get-chromedriver-py.tex",
         "get-chromedriver-py Documentation",
-        "Artur Barseghyan \\textless{}artur.barseghyan@gmail.com\\textgreater{}",
+        "Artur Barseghyan \\textless{}artur.barseghyan@gmail.com"
+        "\\textgreater{}",
         "manual",
     ),
 ]
