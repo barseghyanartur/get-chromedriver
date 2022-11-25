@@ -1,5 +1,7 @@
 import unittest
 from http.client import HTTPMessage
+from sys import version_info
+from unittest import skipIf
 from unittest.mock import patch
 from urllib.error import HTTPError
 
@@ -487,6 +489,7 @@ class GetChromedriverTestCase(unittest.TestCase):
         result = run()
         self.assertFalse(result)
 
+    @skipIf(version_info.major == 3 and version_info.minor == 11)
     @patch(
         "get_chromedriver.urlopen",
         side_effect=HTTPError(
