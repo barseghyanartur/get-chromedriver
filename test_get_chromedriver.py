@@ -445,18 +445,24 @@ class GetChromedriverTestCase(unittest.TestCase):
         self.assertIsNotNone(chromium_version)
 
     @parametrize(
-        "chromium_version, chromedriver_version",
+        "chromium_version, chromedriver_version, releases_tree",
         [
-            ("107.0.5304.110", "107.0.5304.18"),
-            ("100.0.4896.12", "100.0.4896.20"),
-            ("", None),
-            ("9999", None),
+            ("107.0.5304.110", "107.0.5304.18", RELEASES_TREE),
+            ("100.0.4896.12", "100.0.4896.20", RELEASES_TREE),
+            ("", None, RELEASES_TREE),
+            ("9999", None, RELEASES_TREE),
+            ("107.0.5304.110", None, {}),
         ]
     )
-    def test_get_closest_version(self, chromium_version, chromedriver_version):
+    def test_get_closest_version(
+        self,
+        chromium_version,
+        chromedriver_version,
+        releases_tree,
+    ):
         """Test get_closest_version."""
 
-        closest_version = get_closest_version(chromium_version, RELEASES_TREE)
+        closest_version = get_closest_version(chromium_version, releases_tree)
         self.assertEqual(closest_version, chromedriver_version)
 
     def test_get_releases_tree(self):
@@ -474,9 +480,24 @@ class GetChromedriverTestCase(unittest.TestCase):
         new_callable=lambda: lambda: False,
     )
     def test_run_failed_get_chromium_version(self, func):
-        """Test run failed."""
+        """Test run failed due to errors in obtaining the Chromium version."""
         result = run()
         self.assertFalse(result)
+
+    @patch(
+        "get_chromedriver.urlopen",
+        side_effect=HTTPError(
+            url="https://pypi.org/pypi/chromedriver-py/json",
+            code=404,
+            msg="Not Found",
+            hdrs=HTTPMessage(),
+            fp=None,
+        ),
+    )
+    def test_get_releases_tree_failed_urlopen(self, func):
+        """Test run failed due to HTTP errors querying PyPI."""
+        result = get_releases_tree()
+        self.assertEqual(result, {})
 
     def test_run_cli(self):
         """Test run CLI."""
