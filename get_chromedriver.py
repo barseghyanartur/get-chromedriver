@@ -9,6 +9,7 @@ import re
 from shlex import split
 from subprocess import check_output
 from typing import Any, Dict, Union
+from urllib.error import HTTPError
 from urllib.request import urlopen
 
 __title__ = "get_chromedriver.py"
@@ -42,7 +43,11 @@ def get_chromium_version() -> Union[str, None]:
 def get_releases_tree() -> Dict[str, Any]:
     """Get releases tree."""
 
-    response = urlopen("https://pypi.org/pypi/chromedriver-py/json")
+    try:
+        response = urlopen("https://pypi.org/pypi/chromedriver-py/json")
+    except HTTPError as err:
+        LOGGER.exception(err)
+        return {}
 
     data = json.loads(response.read())
     releases = list(data["releases"].keys())

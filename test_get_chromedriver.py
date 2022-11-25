@@ -1,4 +1,7 @@
 import unittest
+from http.client import HTTPMessage
+from unittest.mock import patch
+from urllib.error import HTTPError
 
 from parametrize import parametrize
 
@@ -423,6 +426,16 @@ RELEASES_TREE = {
 }
 
 
+def urlopen_raise():
+    raise HTTPError(
+        url="https://pypi.org/pypi/chromedriver-py/json",
+        code=404,
+        msg="Not Found",
+        hdrs=HTTPMessage(),
+        fp=None,
+    )
+
+
 class GetChromedriverTestCase(unittest.TestCase):
     """get_chromedriver test case."""
 
@@ -455,6 +468,15 @@ class GetChromedriverTestCase(unittest.TestCase):
         """Test run."""
         result = run()
         self.assertTrue(result)
+
+    @patch(
+        "get_chromedriver.get_chromium_version",
+        new_callable=lambda: lambda: False,
+    )
+    def test_run_failed_get_chromium_version(self, func):
+        """Test run failed."""
+        result = run()
+        self.assertFalse(result)
 
     def test_run_cli(self):
         """Test run CLI."""
