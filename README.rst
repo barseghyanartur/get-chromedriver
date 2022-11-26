@@ -4,7 +4,7 @@ get-chromedriver-py
 Get `chromedriver-py <https://pypi.org/project/chromedriver-py/>`__
 version most suitable for your system.
 
-For instance, you could use it with GitHub Actions to match
+For instance, you could use it when running tests locally to match
 installed ``Chromium`` browser version with most suitable version
 of ``chromedriver-py``.
 
@@ -42,6 +42,8 @@ Documentation is available on `Read the Docs
 Prerequisites
 =============
 - Python 3.7, 3.8, 3.9, 3.10 and 3.11.
+
+*Also works with Python 3.6, although no longer tested against.*
 
 Installation
 ============
